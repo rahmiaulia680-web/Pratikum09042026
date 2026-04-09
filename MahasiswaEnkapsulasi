@@ -1,0 +1,84 @@
+/*
+ * Nama : Rahmi Aulia
+ * NIM  : 2501083021
+ * Desk : 
+ */
+package com.mycompany.praktikum09042026;
+
+/**
+ *
+ * @author Rahmi Aulia
+ */
+import java.util.Scanner;
+public class MahasiswaEnkapsulasi {
+    private String nama,nim,jurusan;
+    private int umur;
+    private Double ipk;
+    
+    MahasiswaEnkapsulasi(){
+     }
+    
+    MahasiswaEnkapsulasi(String nama, String nim, String jurusan, int umur, double ipk){
+        this.nama = nama;
+        this.nim = nim;
+        this.jurusan = jurusan;
+        this.umur = umur;
+        this.ipk = ipk;
+    }
+    
+    public String getNama(){
+        return nama;
+    }
+    
+    public String getNim() {
+        return nim;
+    }
+
+    public String getJurusan() {
+        return jurusan;
+    }
+
+    public int getUmur() {
+        return umur;
+    }
+    
+    public double getIpk() {
+        return ipk;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public void setNim(String nim) {
+        this.nim = nim;
+    }
+    
+    public void setJurusan(String jurusan) {
+        this.jurusan = jurusan;
+    }
+
+    public void setUmur(int umur) {
+        this.umur = umur;
+    }
+
+    public void setIpk(double ipk) {
+        this.ipk = ipk;
+    }
+    
+   public void tampilInfo() {
+        System.out.println("Nama    : " + nama);
+        System.out.println("NIM     : " + nim);
+        System.out.println("Jurusan : " + jurusan);
+        System.out.println("Umur    : " + umur);
+        System.out.println("IPK     : " + ipk);
+    }
+
+    public String statusKelulusan() {
+        if (ipk >= 2.75) {
+            return "Lulus";
+        } else {
+            return "Tidak Lulus";
+        }
+    }
+}

@@ -1,0 +1,28 @@
+/*
+ * Nama : Rahmi Aulia
+ * NIM  : 2501083021
+ * Desk : 
+ */
+package com.mycompany.praktikum09042026;
+
+/**
+ *
+ * @author Rahmi Aulia
+ */
+import java.util.Scanner;
+public class MainMahasiswaEnkapsulasi {
+    public static void main(String[] args) {
+        
+        MahasiswaEnkapsulasi mhs = new MahasiswaEnkapsulasi();
+
+        mhs.setNama("Rahmi Aulia");
+        mhs.setNim("2501083021");
+        mhs.setJurusan("Teknologi Informasi");
+        mhs.setUmur(20);
+        mhs.setIpk(3.5);
+
+        mhs.tampilInfo();
+
+        System.out.println("Status  : " + mhs.statusKelulusan());
+    }
+}

@@ -1,0 +1,48 @@
+/*
+ * 
+ */
+package com.mycompany.praktikum09042026;
+
+/**
+ *
+ * @author Rahmi Aulia
+ */
+import java.util.Scanner;
+public class MainPersegiPanjangEnkapsulasi {
+    public static void main(String[] args) {
+        // object ppl menggunakan constructor 1
+        System.out.println("banyak objek= "+PersegiPanjangEnkapsulasi.getjumlahObjek());
+        PersegiPanjangEnkapsulasi ppl = new PersegiPanjangEnkapsulasi();
+        ppl.setPanjang(10);
+        ppl.setLebar(10);
+        
+        System.out.println("Akses method dalam main class");
+        System.out.println("Luas persegi panjang = "+ppl.getLuas() );
+        System.out.println("Keliling = "+ppl.getKel());
+        
+        System.out.println();
+        ppl.TampilData();
+        
+        //object pp2 menggunakan contructor 2
+        System.out.println("Objek 2 menggunakan contructor 2");
+        PersegiPanjangEnkapsulasi pp2 = new PersegiPanjangEnkapsulasi(19,10);
+        System.out.println("Akses method dalam main class");
+        System.out.println("Luas persegi panjang = "+pp2.getKel());
+        System.out.println();
+        pp2.TampilData();
+      
+        //object pp3 menggunakan contructor 2 dengan input user 
+        System.out.println("\nObjek 3 memggunakan contructor 2");
+        System.out.println("Panjang dan lebar input user");
+        Scanner input = new Scanner(System.in);
+        System.out.print("masukan panjang = ");
+        int pjg = input.nextInt();
+        System.out.print("Masukan lebar = ");
+        int lbr = input.nextInt();
+        PersegiPanjangEnkapsulasi pp3 = new PersegiPanjangEnkapsulasi(pjg,lbr);
+        pp3.TampilData();
+        
+        System.out.println("banyak objek= "+PersegiPanjangEnkapsulasi.getjumlahObjek());
+    }
+
+}
